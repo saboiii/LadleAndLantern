@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[4,)"
-license = "All Rights Reserved"
+license = "MIT"
 
 [[mods]]
 modId = "ladle_and_lantern"
@@ -8,7 +8,7 @@ version = "${mod_version}"
 displayName = "Ladle & Lantern"
 authors = "Saba Azad"
 description = '''
-Turn any build into a restaurant. Customers walk in, order from your menu and remember how well you treated them. You cook with whatever food mods you have.
+A cozy restaurant simulator minecraft mod.
 '''
 
 [[dependencies.ladle_and_lantern]]
