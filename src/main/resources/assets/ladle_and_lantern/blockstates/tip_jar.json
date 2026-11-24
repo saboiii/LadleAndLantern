@@ -1,0 +1,949 @@
+{
+ "variants": {
+  "facing=north,fill=0,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_empty"
+  },
+  "facing=east,fill=0,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_empty"
+  },
+  "facing=east,fill=0,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_empty"
+  },
+  "facing=east,fill=0,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_empty",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_1"
+  },
+  "facing=east,fill=1,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_1",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_1"
+  },
+  "facing=east,fill=1,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_1",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_1"
+  },
+  "facing=east,fill=1,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_1",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_2"
+  },
+  "facing=east,fill=2,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_2",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_2"
+  },
+  "facing=east,fill=2,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_2",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_2"
+  },
+  "facing=east,fill=2,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_2",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_3"
+  },
+  "facing=east,fill=3,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_3",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_3"
+  },
+  "facing=east,fill=3,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_3",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_3"
+  },
+  "facing=east,fill=3,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_3",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_4"
+  },
+  "facing=east,fill=4,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_4",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_4"
+  },
+  "facing=east,fill=4,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_4",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_4"
+  },
+  "facing=east,fill=4,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_4",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_5"
+  },
+  "facing=east,fill=5,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_5",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_5"
+  },
+  "facing=east,fill=5,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_5",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_5"
+  },
+  "facing=east,fill=5,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_5",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_6"
+  },
+  "facing=east,fill=6,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=cottage,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_cash_6",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_6"
+  },
+  "facing=east,fill=6,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=cottage,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_coin_6",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_6"
+  },
+  "facing=east,fill=6,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=cottage,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_diamond_6",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty"
+  },
+  "facing=east,fill=0,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty"
+  },
+  "facing=east,fill=0,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty"
+  },
+  "facing=east,fill=0,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_empty",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_1"
+  },
+  "facing=east,fill=1,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_1",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_1"
+  },
+  "facing=east,fill=1,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_1",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_1"
+  },
+  "facing=east,fill=1,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_1",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_2"
+  },
+  "facing=east,fill=2,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_2",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_2"
+  },
+  "facing=east,fill=2,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_2",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_2"
+  },
+  "facing=east,fill=2,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_2",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_3"
+  },
+  "facing=east,fill=3,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_3",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_3"
+  },
+  "facing=east,fill=3,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_3",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_3"
+  },
+  "facing=east,fill=3,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_3",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_4"
+  },
+  "facing=east,fill=4,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_4",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_4"
+  },
+  "facing=east,fill=4,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_4",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_4"
+  },
+  "facing=east,fill=4,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_4",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_5"
+  },
+  "facing=east,fill=5,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_5",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_5"
+  },
+  "facing=east,fill=5,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_5",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_5"
+  },
+  "facing=east,fill=5,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_5",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_6"
+  },
+  "facing=east,fill=6,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=rustic,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_cash_6",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_6"
+  },
+  "facing=east,fill=6,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=rustic,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_coin_6",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_6"
+  },
+  "facing=east,fill=6,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=rustic,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_rustic_diamond_6",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty"
+  },
+  "facing=east,fill=0,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty"
+  },
+  "facing=east,fill=0,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 270
+  },
+  "facing=north,fill=0,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty"
+  },
+  "facing=east,fill=0,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 90
+  },
+  "facing=south,fill=0,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 180
+  },
+  "facing=west,fill=0,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_empty",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_1"
+  },
+  "facing=east,fill=1,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_1",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_1"
+  },
+  "facing=east,fill=1,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_1",
+   "y": 270
+  },
+  "facing=north,fill=1,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_1"
+  },
+  "facing=east,fill=1,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_1",
+   "y": 90
+  },
+  "facing=south,fill=1,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_1",
+   "y": 180
+  },
+  "facing=west,fill=1,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_1",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_2"
+  },
+  "facing=east,fill=2,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_2",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_2"
+  },
+  "facing=east,fill=2,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_2",
+   "y": 270
+  },
+  "facing=north,fill=2,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_2"
+  },
+  "facing=east,fill=2,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_2",
+   "y": 90
+  },
+  "facing=south,fill=2,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_2",
+   "y": 180
+  },
+  "facing=west,fill=2,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_2",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_3"
+  },
+  "facing=east,fill=3,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_3",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_3"
+  },
+  "facing=east,fill=3,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_3",
+   "y": 270
+  },
+  "facing=north,fill=3,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_3"
+  },
+  "facing=east,fill=3,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_3",
+   "y": 90
+  },
+  "facing=south,fill=3,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_3",
+   "y": 180
+  },
+  "facing=west,fill=3,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_3",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_4"
+  },
+  "facing=east,fill=4,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_4",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_4"
+  },
+  "facing=east,fill=4,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_4",
+   "y": 270
+  },
+  "facing=north,fill=4,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_4"
+  },
+  "facing=east,fill=4,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_4",
+   "y": 90
+  },
+  "facing=south,fill=4,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_4",
+   "y": 180
+  },
+  "facing=west,fill=4,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_4",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_5"
+  },
+  "facing=east,fill=5,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_5",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_5"
+  },
+  "facing=east,fill=5,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_5",
+   "y": 270
+  },
+  "facing=north,fill=5,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_5"
+  },
+  "facing=east,fill=5,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_5",
+   "y": 90
+  },
+  "facing=south,fill=5,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_5",
+   "y": 180
+  },
+  "facing=west,fill=5,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_5",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_6"
+  },
+  "facing=east,fill=6,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=modern,money=cash": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_cash_6",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_6"
+  },
+  "facing=east,fill=6,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=modern,money=coin": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_coin_6",
+   "y": 270
+  },
+  "facing=north,fill=6,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_6"
+  },
+  "facing=east,fill=6,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_6",
+   "y": 90
+  },
+  "facing=south,fill=6,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_6",
+   "y": 180
+  },
+  "facing=west,fill=6,finish=modern,money=diamond": {
+   "model": "ladle_and_lantern:block/tip_jar_modern_diamond_6",
+   "y": 270
+  }
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "chalk": "ladle_and_lantern:block/chalkboard",
+  "wood": "ladle_and_lantern:block/coat_rack_wood",
+  "particle": "ladle_and_lantern:block/coat_rack_wood"
+ },
+ "elements": [
+  {
+   "from": [
+    1,
+    0,
+    3
+   ],
+   "to": [
+    15,
+    15,
+    4
+   ],
+   "rotation": {
+    "origin": [
+     8,
+     0,
+     3.5
+    ],
+    "axis": "x",
+    "angle": 22.5
+   },
+   "faces": {
+    "east": {
+     "texture": "#wood"
+    },
+    "west": {
+     "texture": "#wood"
+    },
+    "up": {
+     "texture": "#wood"
+    },
+    "down": {
+     "texture": "#wood"
+    },
+    "north": {
+     "texture": "#chalk"
+    },
+    "south": {
+     "texture": "#wood"
+    }
+   }
+  },
+  {
+   "from": [
+    1,
+    0,
+    12
+   ],
+   "to": [
+    15,
+    15,
+    13
+   ],
+   "rotation": {
+    "origin": [
+     8,
+     0,
+     12.5
+    ],
+    "axis": "x",
+    "angle": -22.5
+   },
+   "faces": {
+    "east": {
+     "texture": "#wood"
+    },
+    "west": {
+     "texture": "#wood"
+    },
+    "up": {
+     "texture": "#wood"
+    },
+    "down": {
+     "texture": "#wood"
+    },
+    "north": {
+     "texture": "#wood"
+    },
+    "south": {
+     "texture": "#chalk"
+    }
+   }
+  },
+  {
+   "from": [
+    2,
+    13,
+    6.5
+   ],
+   "to": [
+    14,
+    14,
+    9.5
+   ],
+   "faces": {
+    "north": {
+     "texture": "#wood"
+    },
+    "south": {
+     "texture": "#wood"
+    },
+    "east": {
+     "texture": "#wood"
+    },
+    "west": {
+     "texture": "#wood"
+    },
+    "up": {
+     "texture": "#wood"
+    },
+    "down": {
+     "texture": "#wood"
+    }
+   }
+  }
+ ]
+}

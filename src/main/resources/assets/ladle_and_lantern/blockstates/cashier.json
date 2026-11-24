@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ladle_and_lantern:block/cashier"
+    },
+    "facing=east": {
+      "model": "ladle_and_lantern:block/cashier",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ladle_and_lantern:block/cashier",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ladle_and_lantern:block/cashier",
+      "y": 270
+    }
+  }
+}

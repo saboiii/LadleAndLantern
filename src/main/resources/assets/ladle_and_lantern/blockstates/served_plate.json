@@ -1,0 +1,57 @@
+{
+ "variants": {
+  "facing=north": [
+   {
+    "model": "ladle_and_lantern:block/served_plate_rose"
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_buttercup"
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_caramel"
+   }
+  ],
+  "facing=east": [
+   {
+    "model": "ladle_and_lantern:block/served_plate_rose",
+    "y": 90
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_buttercup",
+    "y": 90
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_caramel",
+    "y": 90
+   }
+  ],
+  "facing=south": [
+   {
+    "model": "ladle_and_lantern:block/served_plate_rose",
+    "y": 180
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_buttercup",
+    "y": 180
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_caramel",
+    "y": 180
+   }
+  ],
+  "facing=west": [
+   {
+    "model": "ladle_and_lantern:block/served_plate_rose",
+    "y": 270
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_buttercup",
+    "y": 270
+   },
+   {
+    "model": "ladle_and_lantern:block/served_plate_caramel",
+    "y": 270
+   }
+  ]
+ }
+}

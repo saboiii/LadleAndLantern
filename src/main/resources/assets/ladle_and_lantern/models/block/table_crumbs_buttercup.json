@@ -1,0 +1,7 @@
+{
+ "parent": "ladle_and_lantern:block/table_crumbs_rose",
+ "textures": {
+  "top": "ladle_and_lantern:block/china_dirty_buttercup",
+  "particle": "ladle_and_lantern:block/china_dirty_buttercup"
+ }
+}

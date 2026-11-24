@@ -1,0 +1,6 @@
+{
+ "parent": "ladle_and_lantern:block/tip_jar_cash_2",
+ "textures": {
+  "money": "ladle_and_lantern:block/tip_coins"
+ }
+}

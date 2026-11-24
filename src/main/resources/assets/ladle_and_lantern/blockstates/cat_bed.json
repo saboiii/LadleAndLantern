@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "ladle_and_lantern:block/cat_bed"
+  },
+  "facing=east": {
+   "model": "ladle_and_lantern:block/cat_bed",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "ladle_and_lantern:block/cat_bed",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "ladle_and_lantern:block/cat_bed",
+   "y": 270
+  }
+ }
+}

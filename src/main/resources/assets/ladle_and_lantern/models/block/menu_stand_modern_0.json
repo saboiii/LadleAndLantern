@@ -1,0 +1,11 @@
+{
+ "parent": "ladle_and_lantern:block/menu_stand_0",
+ "textures": {
+  "wood": "ladle_and_lantern:block/modern_ash",
+  "panel": "ladle_and_lantern:block/modern_ash_panel",
+  "paint": "ladle_and_lantern:block/paint_charcoal",
+  "petal": "ladle_and_lantern:block/petal_modern",
+  "middle": "ladle_and_lantern:block/petal_middle_modern",
+  "particle": "ladle_and_lantern:block/modern_ash"
+ }
+}

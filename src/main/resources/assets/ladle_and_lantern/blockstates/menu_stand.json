@@ -1,0 +1,184 @@
+{
+ "variants": {
+  "cards=0,facing=north,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_0"
+  },
+  "cards=0,facing=east,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_0",
+   "y": 90
+  },
+  "cards=0,facing=south,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_0",
+   "y": 180
+  },
+  "cards=0,facing=west,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_0",
+   "y": 270
+  },
+  "cards=1,facing=north,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_1"
+  },
+  "cards=1,facing=east,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_1",
+   "y": 90
+  },
+  "cards=1,facing=south,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_1",
+   "y": 180
+  },
+  "cards=1,facing=west,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_1",
+   "y": 270
+  },
+  "cards=2,facing=north,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_2"
+  },
+  "cards=2,facing=east,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_2",
+   "y": 90
+  },
+  "cards=2,facing=south,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_2",
+   "y": 180
+  },
+  "cards=2,facing=west,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_2",
+   "y": 270
+  },
+  "cards=3,facing=north,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_3"
+  },
+  "cards=3,facing=east,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_3",
+   "y": 90
+  },
+  "cards=3,facing=south,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_3",
+   "y": 180
+  },
+  "cards=3,facing=west,finish=cottage": {
+   "model": "ladle_and_lantern:block/menu_stand_3",
+   "y": 270
+  },
+  "cards=0,facing=north,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_0"
+  },
+  "cards=0,facing=east,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_0",
+   "y": 90
+  },
+  "cards=0,facing=south,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_0",
+   "y": 180
+  },
+  "cards=0,facing=west,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_0",
+   "y": 270
+  },
+  "cards=1,facing=north,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_1"
+  },
+  "cards=1,facing=east,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_1",
+   "y": 90
+  },
+  "cards=1,facing=south,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_1",
+   "y": 180
+  },
+  "cards=1,facing=west,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_1",
+   "y": 270
+  },
+  "cards=2,facing=north,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_2"
+  },
+  "cards=2,facing=east,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_2",
+   "y": 90
+  },
+  "cards=2,facing=south,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_2",
+   "y": 180
+  },
+  "cards=2,facing=west,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_2",
+   "y": 270
+  },
+  "cards=3,facing=north,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_3"
+  },
+  "cards=3,facing=east,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_3",
+   "y": 90
+  },
+  "cards=3,facing=south,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_3",
+   "y": 180
+  },
+  "cards=3,facing=west,finish=rustic": {
+   "model": "ladle_and_lantern:block/menu_stand_rustic_3",
+   "y": 270
+  },
+  "cards=0,facing=north,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_0"
+  },
+  "cards=0,facing=east,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_0",
+   "y": 90
+  },
+  "cards=0,facing=south,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_0",
+   "y": 180
+  },
+  "cards=0,facing=west,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_0",
+   "y": 270
+  },
+  "cards=1,facing=north,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_1"
+  },
+  "cards=1,facing=east,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_1",
+   "y": 90
+  },
+  "cards=1,facing=south,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_1",
+   "y": 180
+  },
+  "cards=1,facing=west,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_1",
+   "y": 270
+  },
+  "cards=2,facing=north,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_2"
+  },
+  "cards=2,facing=east,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_2",
+   "y": 90
+  },
+  "cards=2,facing=south,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_2",
+   "y": 180
+  },
+  "cards=2,facing=west,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_2",
+   "y": 270
+  },
+  "cards=3,facing=north,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_3"
+  },
+  "cards=3,facing=east,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_3",
+   "y": 90
+  },
+  "cards=3,facing=south,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_3",
+   "y": 180
+  },
+  "cards=3,facing=west,finish=modern": {
+   "model": "ladle_and_lantern:block/menu_stand_modern_3",
+   "y": 270
+  }
+ }
+}

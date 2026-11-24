@@ -1,0 +1,12 @@
+{
+ "parent": "ladle_and_lantern:block/tip_jar_cash_3",
+ "textures": {
+  "wood": "ladle_and_lantern:block/modern_ash",
+  "cloth": "ladle_and_lantern:block/gingham_modern",
+  "twine": "ladle_and_lantern:block/twine_modern",
+  "tag": "ladle_and_lantern:block/tip_tag_modern",
+  "tagstring": "ladle_and_lantern:block/twine_modern",
+  "particle": "ladle_and_lantern:block/gingham_modern",
+  "money": "ladle_and_lantern:block/tip_coins"
+ }
+}

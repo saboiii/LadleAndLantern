@@ -1,0 +1,7 @@
+{
+ "parent": "ladle_and_lantern:block/served_plate_rose",
+ "textures": {
+  "top": "ladle_and_lantern:block/china_caramel",
+  "particle": "ladle_and_lantern:block/china_caramel"
+ }
+}

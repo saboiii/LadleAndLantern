@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ladle_and_lantern:block/blue_ribbon"
+    },
+    "facing=east": {
+      "model": "ladle_and_lantern:block/blue_ribbon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ladle_and_lantern:block/blue_ribbon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ladle_and_lantern:block/blue_ribbon",
+      "y": 270
+    }
+  }
+}

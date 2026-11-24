@@ -1,0 +1,87 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "face": "ladle_and_lantern:block/menu_card_face",
+  "edge": "ladle_and_lantern:block/menu_card_edge",
+  "particle": "ladle_and_lantern:block/menu_card_face"
+ },
+ "elements": [
+  {
+   "from": [
+    8.5,
+    0,
+    1.5
+   ],
+   "to": [
+    15,
+    0.2,
+    11
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      0,
+      6.5,
+      0.25
+     ],
+     "texture": "#edge"
+    },
+    "south": {
+     "uv": [
+      0,
+      0,
+      6.5,
+      0.25
+     ],
+     "texture": "#edge"
+    },
+    "east": {
+     "uv": [
+      0,
+      0,
+      9.5,
+      0.25
+     ],
+     "texture": "#edge"
+    },
+    "west": {
+     "uv": [
+      0,
+      0,
+      9.5,
+      0.25
+     ],
+     "texture": "#edge"
+    },
+    "up": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#face"
+    },
+    "down": {
+     "uv": [
+      0,
+      0,
+      6.5,
+      9.5
+     ],
+     "texture": "#edge"
+    }
+   },
+   "rotation": {
+    "origin": [
+     11.75,
+     0,
+     6.25
+    ],
+    "axis": "y",
+    "angle": 22.5
+   }
+  }
+ ]
+}

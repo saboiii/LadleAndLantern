@@ -1,0 +1,11 @@
+{
+ "parent": "ladle_and_lantern:block/tip_jar_diamond_5",
+ "textures": {
+  "wood": "ladle_and_lantern:block/rustic_walnut",
+  "cloth": "ladle_and_lantern:block/gingham_rustic",
+  "twine": "ladle_and_lantern:block/twine_rustic",
+  "tag": "ladle_and_lantern:block/tip_tag_rustic",
+  "tagstring": "ladle_and_lantern:block/twine_rustic",
+  "particle": "ladle_and_lantern:block/gingham_rustic"
+ }
+}

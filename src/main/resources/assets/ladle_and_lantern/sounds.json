@@ -1,0 +1,176 @@
+{
+  "doorbell": {
+    "sounds": [
+      "ladle_and_lantern:doorbell_shop"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.doorbell"
+  },
+  "cutlery": {
+    "subtitle": "subtitles.ladle_and_lantern.cutlery",
+    "sounds": [
+      "ladle_and_lantern:cutlery1",
+      "ladle_and_lantern:cutlery2",
+      "ladle_and_lantern:cutlery3"
+    ]
+  },
+  "chatter": {
+    "subtitle": "subtitles.ladle_and_lantern.chatter",
+    "sounds": [
+      "minecraft:mob/villager/idle1",
+      "minecraft:mob/villager/idle2",
+      "minecraft:mob/villager/idle3",
+      "minecraft:mob/villager/haggle1",
+      "minecraft:mob/villager/haggle2",
+      "minecraft:mob/villager/haggle3",
+      "minecraft:mob/wandering_trader/idle1",
+      "minecraft:mob/wandering_trader/idle2",
+      "minecraft:mob/wandering_trader/idle3",
+      "minecraft:mob/wandering_trader/idle4",
+      "minecraft:mob/wandering_trader/idle5"
+    ]
+  },
+  "laugh": {
+    "subtitle": "subtitles.ladle_and_lantern.laugh",
+    "sounds": [
+      "minecraft:mob/wandering_trader/yes1",
+      "minecraft:mob/wandering_trader/yes2",
+      "minecraft:mob/wandering_trader/yes3",
+      "minecraft:mob/wandering_trader/yes4"
+    ]
+  },
+  "mmm": {
+    "subtitle": "subtitles.ladle_and_lantern.mmm",
+    "sounds": [
+      "minecraft:mob/villager/yes1",
+      "minecraft:mob/villager/yes2",
+      "minecraft:mob/villager/yes3"
+    ]
+  },
+  "approve": {
+    "subtitle": "subtitles.ladle_and_lantern.approve",
+    "sounds": [
+      "minecraft:mob/villager/yes1",
+      "minecraft:mob/villager/yes2",
+      "minecraft:mob/villager/yes3",
+      "minecraft:mob/wandering_trader/yes1",
+      "minecraft:mob/wandering_trader/yes2"
+    ]
+  },
+  "bag": {
+    "sounds": [
+      "ladle_and_lantern:packaging1",
+      "ladle_and_lantern:packaging2"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.bag"
+  },
+  "cha_ching": {
+    "sounds": [
+      "ladle_and_lantern:cash_register"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.cha_ching"
+  },
+  "record_lantern_glow": {
+    "subtitle": "subtitles.ladle_and_lantern.record",
+    "sounds": [
+      {
+        "name": "ladle_and_lantern:record_lantern_glow",
+        "stream": true
+      }
+    ]
+  },
+  "record_morning_bread": {
+    "subtitle": "subtitles.ladle_and_lantern.record",
+    "sounds": [
+      {
+        "name": "ladle_and_lantern:record_morning_bread",
+        "stream": true
+      }
+    ]
+  },
+  "record_snowy_windowsill": {
+    "subtitle": "subtitles.ladle_and_lantern.record",
+    "sounds": [
+      {
+        "name": "ladle_and_lantern:record_snowy_windowsill",
+        "stream": true
+      }
+    ]
+  },
+  "dine_in_pay": {
+    "sounds": [
+      "ladle_and_lantern:dine_in_pay"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.dine_in_pay"
+  },
+  "place_plate": {
+    "sounds": [
+      "ladle_and_lantern:place_plate1",
+      "ladle_and_lantern:place_plate2",
+      "ladle_and_lantern:place_plate3"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.place_plate"
+  },
+  "menu_card": {
+    "sounds": [
+      "ladle_and_lantern:menu_card1",
+      "ladle_and_lantern:menu_card2",
+      "ladle_and_lantern:menu_card3"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.menu_card"
+  },
+  "service_bell": {
+    "sounds": [
+      "ladle_and_lantern:service_bell"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.service_bell"
+  },
+  "successful_serve": {
+    "sounds": [
+      "ladle_and_lantern:successful_serve"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.successful_serve"
+  },
+  "tip_jar": {
+    "sounds": [
+      "ladle_and_lantern:tip_jar"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.tip_jar"
+  },
+  "water_pour": {
+    "sounds": [
+      "ladle_and_lantern:water_pour"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.water_pour"
+  },
+  "clear_dishes": {
+    "sounds": [
+      "ladle_and_lantern:clear_dishes1",
+      "ladle_and_lantern:clear_dishes2"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.clear_dishes"
+  },
+  "laughter": {
+    "sounds": [
+      "ladle_and_lantern:laughter1",
+      "ladle_and_lantern:laughter2",
+      "ladle_and_lantern:laughter3"
+    ],
+    "subtitle": "subtitles.ladle_and_lantern.laughter"
+  },
+  "ambience_cafe": {
+    "sounds": [
+      {
+        "name": "ladle_and_lantern:ambience_cafe",
+        "stream": true
+      }
+    ]
+  },
+  "ambience_room": {
+    "sounds": [
+      {
+        "name": "ladle_and_lantern:ambience_room",
+        "stream": true
+      }
+    ]
+  }
+}

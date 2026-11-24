@@ -1,0 +1,11 @@
+{
+ "parent": "ladle_and_lantern:block/menu_stand_2",
+ "textures": {
+  "wood": "ladle_and_lantern:block/rustic_walnut",
+  "panel": "ladle_and_lantern:block/rustic_walnut_panel",
+  "paint": "ladle_and_lantern:block/paint_oxblood",
+  "petal": "ladle_and_lantern:block/petal_rustic",
+  "middle": "ladle_and_lantern:block/petal_middle_rustic",
+  "particle": "ladle_and_lantern:block/rustic_walnut"
+ }
+}

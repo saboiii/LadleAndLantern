@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    "WRW"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "R": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "id": "ladle_and_lantern:cat_bed",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+ "variants": {
+  "facing=north": {
+   "model": "ladle_and_lantern:block/corkboard"
+  },
+  "facing=east": {
+   "model": "ladle_and_lantern:block/corkboard",
+   "y": 90
+  },
+  "facing=south": {
+   "model": "ladle_and_lantern:block/corkboard",
+   "y": 180
+  },
+  "facing=west": {
+   "model": "ladle_and_lantern:block/corkboard",
+   "y": 270
+  }
+ }
+}

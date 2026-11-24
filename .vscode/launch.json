@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - ladle-and-lantern",
+        "order": 0
+      },
+      "projectName": "ladle-and-lantern",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/Volumes/XtremeLOAD/Projects/ladle-and-lantern/build/moddev/clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/Volumes/XtremeLOAD/Projects/ladle-and-lantern/build/moddev/clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dladle_and_lantern%%/Volumes/XtremeLOAD/Projects/ladle-and-lantern/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - ladle-and-lantern",
+        "order": 1
+      },
+      "projectName": "ladle-and-lantern",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@/Volumes/XtremeLOAD/Projects/ladle-and-lantern/build/moddev/serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@/Volumes/XtremeLOAD/Projects/ladle-and-lantern/build/moddev/serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dladle_and_lantern%%/Volumes/XtremeLOAD/Projects/ladle-and-lantern/bin/main"
+      ],
+      "cwd": "${workspaceFolder}/run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

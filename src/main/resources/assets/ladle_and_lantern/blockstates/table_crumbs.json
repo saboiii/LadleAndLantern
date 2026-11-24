@@ -1,0 +1,120 @@
+{
+ "multipart": [
+  {
+   "when": {
+    "dirty": "true",
+    "facing": "north"
+   },
+   "apply": [
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_rose"
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_buttercup"
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_caramel"
+    }
+   ]
+  },
+  {
+   "when": {
+    "menu": "true",
+    "facing": "north"
+   },
+   "apply": {
+    "model": "ladle_and_lantern:block/table_menu"
+   }
+  },
+  {
+   "when": {
+    "dirty": "true",
+    "facing": "east"
+   },
+   "apply": [
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_rose",
+     "y": 90
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_buttercup",
+     "y": 90
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_caramel",
+     "y": 90
+    }
+   ]
+  },
+  {
+   "when": {
+    "menu": "true",
+    "facing": "east"
+   },
+   "apply": {
+    "model": "ladle_and_lantern:block/table_menu",
+    "y": 90
+   }
+  },
+  {
+   "when": {
+    "dirty": "true",
+    "facing": "south"
+   },
+   "apply": [
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_rose",
+     "y": 180
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_buttercup",
+     "y": 180
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_caramel",
+     "y": 180
+    }
+   ]
+  },
+  {
+   "when": {
+    "menu": "true",
+    "facing": "south"
+   },
+   "apply": {
+    "model": "ladle_and_lantern:block/table_menu",
+    "y": 180
+   }
+  },
+  {
+   "when": {
+    "dirty": "true",
+    "facing": "west"
+   },
+   "apply": [
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_rose",
+     "y": 270
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_buttercup",
+     "y": 270
+    },
+    {
+     "model": "ladle_and_lantern:block/table_crumbs_caramel",
+     "y": 270
+    }
+   ]
+  },
+  {
+   "when": {
+    "menu": "true",
+    "facing": "west"
+   },
+   "apply": {
+    "model": "ladle_and_lantern:block/table_menu",
+    "y": 270
+   }
+  }
+ ]
+}

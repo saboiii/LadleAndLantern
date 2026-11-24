@@ -1,0 +1,170 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "wood": "ladle_and_lantern:block/coat_rack_wood",
+  "bag": "ladle_and_lantern:block/paper_bag",
+  "particle": "ladle_and_lantern:block/coat_rack_wood"
+ },
+ "elements": [
+  {
+   "from": [
+    2,
+    2,
+    15
+   ],
+   "to": [
+    14,
+    15,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#wood"
+    },
+    "south": {
+     "texture": "#wood"
+    },
+    "east": {
+     "texture": "#wood"
+    },
+    "west": {
+     "texture": "#wood"
+    },
+    "up": {
+     "texture": "#wood"
+    },
+    "down": {
+     "texture": "#wood"
+    }
+   }
+  },
+  {
+   "from": [
+    2,
+    2,
+    12
+   ],
+   "to": [
+    14,
+    3,
+    15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#wood"
+    },
+    "south": {
+     "texture": "#wood"
+    },
+    "east": {
+     "texture": "#wood"
+    },
+    "west": {
+     "texture": "#wood"
+    },
+    "up": {
+     "texture": "#wood"
+    },
+    "down": {
+     "texture": "#wood"
+    }
+   }
+  },
+  {
+   "from": [
+    3,
+    3,
+    12.5
+   ],
+   "to": [
+    6.5,
+    10,
+    15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#bag"
+    },
+    "south": {
+     "texture": "#bag"
+    },
+    "east": {
+     "texture": "#bag"
+    },
+    "west": {
+     "texture": "#bag"
+    },
+    "up": {
+     "texture": "#bag"
+    },
+    "down": {
+     "texture": "#bag"
+    }
+   }
+  },
+  {
+   "from": [
+    6.75,
+    3,
+    12.5
+   ],
+   "to": [
+    9.25,
+    11,
+    15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#bag"
+    },
+    "south": {
+     "texture": "#bag"
+    },
+    "east": {
+     "texture": "#bag"
+    },
+    "west": {
+     "texture": "#bag"
+    },
+    "up": {
+     "texture": "#bag"
+    },
+    "down": {
+     "texture": "#bag"
+    }
+   }
+  },
+  {
+   "from": [
+    9.5,
+    3,
+    12.5
+   ],
+   "to": [
+    13,
+    9.5,
+    15
+   ],
+   "faces": {
+    "north": {
+     "texture": "#bag"
+    },
+    "south": {
+     "texture": "#bag"
+    },
+    "east": {
+     "texture": "#bag"
+    },
+    "west": {
+     "texture": "#bag"
+    },
+    "up": {
+     "texture": "#bag"
+    },
+    "down": {
+     "texture": "#bag"
+    }
+   }
+  }
+ ]
+}

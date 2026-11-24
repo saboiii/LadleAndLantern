@@ -1,0 +1,79 @@
+{
+ "variants": {
+  "facing=north,glasses=0": {
+   "model": "ladle_and_lantern:block/water_station_0"
+  },
+  "facing=east,glasses=0": {
+   "model": "ladle_and_lantern:block/water_station_0",
+   "y": 90
+  },
+  "facing=south,glasses=0": {
+   "model": "ladle_and_lantern:block/water_station_0",
+   "y": 180
+  },
+  "facing=west,glasses=0": {
+   "model": "ladle_and_lantern:block/water_station_0",
+   "y": 270
+  },
+  "facing=north,glasses=1": {
+   "model": "ladle_and_lantern:block/water_station_1"
+  },
+  "facing=east,glasses=1": {
+   "model": "ladle_and_lantern:block/water_station_1",
+   "y": 90
+  },
+  "facing=south,glasses=1": {
+   "model": "ladle_and_lantern:block/water_station_1",
+   "y": 180
+  },
+  "facing=west,glasses=1": {
+   "model": "ladle_and_lantern:block/water_station_1",
+   "y": 270
+  },
+  "facing=north,glasses=2": {
+   "model": "ladle_and_lantern:block/water_station_2"
+  },
+  "facing=east,glasses=2": {
+   "model": "ladle_and_lantern:block/water_station_2",
+   "y": 90
+  },
+  "facing=south,glasses=2": {
+   "model": "ladle_and_lantern:block/water_station_2",
+   "y": 180
+  },
+  "facing=west,glasses=2": {
+   "model": "ladle_and_lantern:block/water_station_2",
+   "y": 270
+  },
+  "facing=north,glasses=3": {
+   "model": "ladle_and_lantern:block/water_station_3"
+  },
+  "facing=east,glasses=3": {
+   "model": "ladle_and_lantern:block/water_station_3",
+   "y": 90
+  },
+  "facing=south,glasses=3": {
+   "model": "ladle_and_lantern:block/water_station_3",
+   "y": 180
+  },
+  "facing=west,glasses=3": {
+   "model": "ladle_and_lantern:block/water_station_3",
+   "y": 270
+  },
+  "facing=north,glasses=4": {
+   "model": "ladle_and_lantern:block/water_station_4"
+  },
+  "facing=east,glasses=4": {
+   "model": "ladle_and_lantern:block/water_station_4",
+   "y": 90
+  },
+  "facing=south,glasses=4": {
+   "model": "ladle_and_lantern:block/water_station_4",
+   "y": 180
+  },
+  "facing=west,glasses=4": {
+   "model": "ladle_and_lantern:block/water_station_4",
+   "y": 270
+  }
+ }
+}
