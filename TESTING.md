@@ -144,7 +144,7 @@ Before you start, run `/kill @e[type=ladle_and_lantern:customer]` once, because 
 2. **Search.** Typing in the menu, calendar and regulars search bars filters the grid straight away. Clicking elsewhere stops typing there.
 3. **Floor.** The map shows the wooden floor, counter, tables, chairs and furniture. Hover a chair to see the guest and their order.
 4. **Calendar.** Today is red, holidays have stars and birthdays hearts. Clicking a holiday shows its dishes on the right.
-5. **Staff.** Let go asks "Really let go?" first. Pay now and Withdraw change the wage fund.
+5. **Staff.** Fire asks "Really fire?" first. Pay now and Withdraw change the wage fund.
 6. **Day's takings.** After closing, the journal page shows stars, the cards and the dish of the day with its icon.
 7. **Beds.** Staff go back to the same bed each night. Break it and they find another.
 8. **Cat.** It still sits at seat height after a reload.
@@ -239,7 +239,20 @@ Before you start, run `/kill @e[type=ladle_and_lantern:customer]` once, because 
 10. **Plates.** While someone eats, the empty plate stays. When they leave, it becomes a dirty plate with crossed cutlery and the menu card peeking out underneath.
 11. **Inventory.** Every block shows a flat picture in the inventory, matching the items. Order bags, ribbons, menus and notebooks look cosier.
 
-### 20. Crash safety
+### 20. Round-fourteen checks
+1. **Plates.** Every plate colour has the new fork and knife; the dirty plates match.
+2. **Floor plan.** No legend under the map; hovering a chair still says how it's doing.
+3. **Overview.** "Open" or "Closed" with no circle in front.
+4. **Stars and hearts.** The book, the employee card, the receipt and the daily report use the name tag sprites. The served message in chat shows sprite stars.
+5. **Fire.** The staff page says Fire, then Really fire.
+6. **Skins.** Drop a few skins from The Skindex into `config/ladle_and_lantern/skins` and restart. New customers wear them.
+7. **Mornings upstairs.** With a bed upstairs, the cashier wakes, steps off the bed, walks down and wanders. Nobody walks over beds.
+8. **Glances.** Staff on the ground floor never look up at someone on the floor above.
+9. **Wrong food.** Serve one right and one wrong dish for a two-dish order. They eat both and the Food score drops. The plates end up empty.
+10. **Ambience.** Leave a busy restaurant running for twenty minutes; the background chatter keeps going. Press F3+T and it comes back on its own.
+11. **Save safety.** Make a copy of a world, corrupt `data/ladle_and_lantern.dat` (cut it short), and open the copy. The world loads from the backup and a `.unreadable` copy sits beside it. Remove a food mod that's on the menu, play, put it back: those dishes are on the menu again.
+
+### 21. Crash safety
 1. During a shift, force-quit Minecraft (Cmd+Q on the launcher's game process, or kill it).
 2. Reload. Menu, ranks, stars and staff should all be there. The restaurant file is `saves/<world>/data/ladle_and_lantern.dat`, with a `.bak` beside it.
 
