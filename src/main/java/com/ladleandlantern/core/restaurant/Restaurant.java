@@ -1,5 +1,6 @@
 package com.ladleandlantern.core.restaurant;
 
+import com.ladleandlantern.LadleAndLantern;
 import com.ladleandlantern.core.food.FoodRules;
 import com.ladleandlantern.core.restaurant.GameCalendar.Holiday;
 import com.ladleandlantern.core.restaurant.GameCalendar.Season;
@@ -307,21 +308,24 @@ public final class Restaurant {
         t.put("waitingLine", posList(waitingLine));
 
         CompoundTag menuTag = new CompoundTag();
+        absentMenu.getAllKeys().forEach(k -> menuTag.putString(k, absentMenu.getString(k)));
         menu.forEach((k, v) -> menuTag.putString(k.toString(), v.name()));
         t.put("menu", menuTag);
         CompoundTag seasonTag = new CompoundTag();
-        seasonal.forEach((k, v) -> seasonTag.put(k.name(), idList(v)));
+        seasonal.forEach((k, v) -> seasonTag.put(k.name(), withAbsent(idList(v), absentSeasonal, k.name())));
         t.put("seasonal", seasonTag);
         CompoundTag holidayTag = new CompoundTag();
-        holidays.forEach((k, v) -> holidayTag.put(k.name(), idList(v)));
+        holidays.forEach((k, v) -> holidayTag.put(k.name(), withAbsent(idList(v), absentHolidays, k.name())));
         t.put("holidays", holidayTag);
         if (special != null) t.putString("special", special.toString());
         t.put("schedule", schedule.save());
 
         ListTag profiles = new ListTag();
+        unreadableCustomers.forEach(e -> profiles.add(e.copy()));
         customers.values().forEach(p -> profiles.add(p.save()));
         t.put("customers", profiles);
         ListTag staffList = new ListTag();
+        unreadableStaff.forEach(e -> staffList.add(e.copy()));
         staff.forEach(s -> staffList.add(s.save()));
         t.put("staff", staffList);
 
@@ -377,19 +381,32 @@ public final class Restaurant {
         for (String key : menuTag.getAllKeys()) {
             ResourceLocation id = ResourceLocation.tryParse(key);
             if (id != null && BuiltInRegistries.ITEM.containsKey(id)) r.menu.put(id, Course.byName(menuTag.getString(key)));
+            else r.absentMenu.putString(key, menuTag.getString(key));
         }
         CompoundTag seasonTag = t.getCompound("seasonal");
-        for (Season s : Season.values()) r.seasonal.get(s).addAll(readIds(seasonTag.getList(s.name(), Tag.TAG_STRING)));
+        for (Season s : Season.values()) r.seasonal.get(s).addAll(readIds(seasonTag.getList(s.name(), Tag.TAG_STRING), r.absentSeasonal, s.name()));
         CompoundTag holidayTag = t.getCompound("holidays");
-        for (Holiday h : Holiday.values()) r.holidays.get(h).addAll(readIds(holidayTag.getList(h.name(), Tag.TAG_STRING)));
+        for (Holiday h : Holiday.values()) r.holidays.get(h).addAll(readIds(holidayTag.getList(h.name(), Tag.TAG_STRING), r.absentHolidays, h.name()));
         if (t.contains("special")) r.special = ResourceLocation.tryParse(t.getString("special"));
         r.schedule.load(t.getCompound("schedule"));
 
         for (Tag e : t.getList("customers", Tag.TAG_COMPOUND)) {
-            CustomerProfile p = CustomerProfile.load((CompoundTag) e);
-            r.customers.put(p.id, p);
+            try {
+                CustomerProfile p = CustomerProfile.load((CompoundTag) e);
+                r.customers.put(p.id, p);
+            } catch (Exception ex) {
+                LadleAndLantern.LOGGER.error("Skipping a regular who couldn't be read; kept in the save", ex);
+                r.unreadableCustomers.add(e.copy());
+            }
         }
-        for (Tag e : t.getList("staff", Tag.TAG_COMPOUND)) r.staff.add(StaffRecord.load((CompoundTag) e));
+        for (Tag e : t.getList("staff", Tag.TAG_COMPOUND)) {
+            try {
+                r.staff.add(StaffRecord.load((CompoundTag) e));
+            } catch (Exception ex) {
+                LadleAndLantern.LOGGER.error("Skipping a member of staff who couldn't be read; kept in the save", ex);
+                r.unreadableStaff.add(e.copy());
+            }
+        }
 
         r.shiftOpen = t.getBoolean("shiftOpen");
         r.shiftOrders = t.getInt("shiftOrders");
@@ -436,12 +453,23 @@ public final class Restaurant {
         return list;
     }
 
-    private static List<ResourceLocation> readIds(ListTag list) {
+    private static List<ResourceLocation> readIds(ListTag list, CompoundTag absent, String key) {
         List<ResourceLocation> out = new ArrayList<>();
+        ListTag missing = new ListTag();
         for (Tag e : list) {
             ResourceLocation id = ResourceLocation.tryParse(e.getAsString());
             if (id != null && BuiltInRegistries.ITEM.containsKey(id)) out.add(id);
+            else missing.add(e.copy());
         }
+        if (!missing.isEmpty()) absent.put(key, missing);
         return out;
+    }
+
+    private final ListTag unreadableCustomers = new ListTag(), unreadableStaff = new ListTag();
+    private final CompoundTag absentMenu = new CompoundTag(), absentSeasonal = new CompoundTag(), absentHolidays = new CompoundTag();
+
+    private static ListTag withAbsent(ListTag list, CompoundTag absent, String key) {
+        for (Tag e : absent.getList(key, Tag.TAG_STRING)) if (!list.contains(e)) list.add(e.copy());
+        return list;
     }
 }

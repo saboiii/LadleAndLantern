@@ -24,6 +24,7 @@ public final class StaffRecord {
 
     public int birthday = -1;
     public ResourceLocation favouriteCake = ResourceLocation.withDefaultNamespace("cake");
+    private boolean cakeChosen;
     public int affection;
 
     public long cakeDay = -1;
@@ -48,9 +49,10 @@ public final class StaffRecord {
     public void ensureDetails(RandomSource random, int seasonLength) {
         if (birthday < 0) birthday = random.nextInt(seasonLength * 4);
 
-        if (favouriteCake.getPath().equals("cake") && random.nextFloat() < 0.8f) {
+        if (!cakeChosen) {
             List<ResourceLocation> cakes = FoodRules.cakes();
             favouriteCake = cakes.get(random.nextInt(cakes.size()));
+            cakeChosen = true;
         }
     }
 
@@ -100,7 +102,11 @@ public final class StaffRecord {
         s.paidThroughDay = t.getLong("paid");
         s.birthday = t.contains("birthday") ? t.getInt("birthday") : -1;
         ResourceLocation cake = ResourceLocation.tryParse(t.getString("cake"));
-        if (cake != null && !cake.getPath().isEmpty() && net.minecraft.core.registries.BuiltInRegistries.ITEM.containsKey(cake)) s.favouriteCake = cake;
+
+        if (cake != null && !cake.getPath().isEmpty()) {
+            s.favouriteCake = cake;
+            s.cakeChosen = true;
+        }
         s.unpaidDays = t.getInt("unpaidDays");
         s.woman = t.getBoolean("woman");
         s.affection = t.getInt("affection");

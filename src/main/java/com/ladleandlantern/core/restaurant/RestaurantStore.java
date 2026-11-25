@@ -120,11 +120,14 @@ public final class RestaurantStore {
         lastFlush = System.currentTimeMillis();
         if (!dirty) return;
         CompoundTag root = new CompoundTag();
-        root.putInt("version", 1);
+        root.putInt("version", SAVE_VERSION);
         ListTag list = new ListTag();
         restaurants.values().forEach(r -> list.add(r.save()));
+
+        unreadable.forEach(t -> list.add(t.copy()));
         root.put("restaurants", list);
         CompoundTag progress = new CompoundTag();
+        unreadablePlayers.getAllKeys().forEach(k -> progress.put(k, unreadablePlayers.get(k).copy()));
         players.forEach((id, p) -> progress.put(id.toString(), p.save()));
         root.put("players", progress);
         root.putLong("calendarDay", calendarDay);
@@ -134,6 +137,7 @@ public final class RestaurantStore {
             NbtIo.writeCompressed(root, tmp);
             if (Files.exists(file)) {
                 Files.copy(file, file.resolveSibling(file.getFileName() + ".bak"), StandardCopyOption.REPLACE_EXISTING);
+                dailyBackup();
             }
             try {
                 Files.move(tmp, file, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
@@ -146,34 +150,83 @@ public final class RestaurantStore {
         }
     }
 
+    private final List<CompoundTag> unreadable = new ArrayList<>();
+    private final CompoundTag unreadablePlayers = new CompoundTag();
+    private static final int SAVE_VERSION = 1;
+
     private void load() {
         Path backup = file.resolveSibling(file.getFileName() + ".bak");
-        if (!tryLoad(file) && Files.exists(backup)) {
-            LadleAndLantern.LOGGER.warn("Main restaurant save unreadable, loading backup {}", backup);
+        if (Files.exists(file) && !tryLoad(file)) {
+            keepCopy(file, "unreadable");
             restaurants.clear();
             players.clear();
-            if (tryLoad(backup)) markDirty();
+            unreadable.clear();
+            if (Files.exists(backup)) {
+                LadleAndLantern.LOGGER.warn("Main restaurant save unreadable, loading backup {}", backup);
+                keepCopy(backup, "backup-used");
+                if (tryLoad(backup)) markDirty();
+            }
         }
         lastFlush = System.currentTimeMillis();
     }
 
     private boolean tryLoad(Path path) {
         if (!Files.exists(path)) return false;
+        CompoundTag root;
         try {
-            CompoundTag root = NbtIo.readCompressed(path, NbtAccounter.unlimitedHeap());
-            for (Tag e : root.getList("restaurants", Tag.TAG_COMPOUND)) {
-                Restaurant r = Restaurant.load((CompoundTag) e);
-                restaurants.put(r.id, r);
-            }
-            if (root.contains("calendarDay")) calendarDay = root.getLong("calendarDay");
-            CompoundTag progress = root.getCompound("players");
-            for (String key : progress.getAllKeys()) {
-                players.put(UUID.fromString(key), PlayerProgress.load(progress.getCompound(key)));
-            }
-            return true;
+            root = NbtIo.readCompressed(path, NbtAccounter.unlimitedHeap());
         } catch (Exception e) {
             LadleAndLantern.LOGGER.error("Could not read restaurant save {}", path, e);
             return false;
+        }
+        if (root.getInt("version") > SAVE_VERSION) {
+            LadleAndLantern.LOGGER.warn("Restaurant save {} is from a newer version of Ladle & Lantern; a copy has been kept", path);
+            keepCopy(path, "from-newer-version");
+        }
+
+        for (Tag e : root.getList("restaurants", Tag.TAG_COMPOUND)) {
+            try {
+                Restaurant r = Restaurant.load((CompoundTag) e);
+                restaurants.put(r.id, r);
+            } catch (Exception ex) {
+                LadleAndLantern.LOGGER.error("Skipping a restaurant that couldn't be read; it is kept in the save untouched", ex);
+                unreadable.add((CompoundTag) e);
+            }
+        }
+        if (root.contains("calendarDay")) calendarDay = root.getLong("calendarDay");
+        CompoundTag progress = root.getCompound("players");
+        for (String key : progress.getAllKeys()) {
+            try {
+                players.put(UUID.fromString(key), PlayerProgress.load(progress.getCompound(key)));
+            } catch (Exception ex) {
+                LadleAndLantern.LOGGER.error("Skipping player progress {} that couldn't be read; it is kept in the save untouched", key, ex);
+                if (progress.get(key) != null) unreadablePlayers.put(key, progress.get(key).copy());
+            }
+        }
+        return true;
+    }
+
+    private void keepCopy(Path path, String why) {
+        try {
+            String stamp = java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
+            Files.copy(path, path.resolveSibling(file.getFileName() + "." + why + "." + stamp), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            LadleAndLantern.LOGGER.error("Could not keep a copy of {}", path, e);
+        }
+    }
+
+    private void dailyBackup() {
+        try {
+            String today = java.time.LocalDate.now().toString();
+            Path daily = file.resolveSibling(file.getFileName() + ".daily-" + today);
+            if (Files.exists(daily)) return;
+            Files.copy(file, daily);
+            try (var all = Files.list(file.getParent())) {
+                List<Path> old = all.filter(p -> p.getFileName().toString().startsWith(file.getFileName() + ".daily-")).sorted().toList();
+                for (int i = 0; i < old.size() - 7; i++) Files.deleteIfExists(old.get(i));
+            }
+        } catch (IOException e) {
+            LadleAndLantern.LOGGER.error("Could not write the daily restaurant backup", e);
         }
     }
 }
