@@ -336,7 +336,7 @@ public abstract class CozyScreen extends Screen {
     }
 
     protected static void stars(GuiGraphics g, int x, int y, int lit) {
-        for (int i = 0; i < 5; i++) star(g, x + i * 7, y, i < lit);
+        for (int i = 0; i < 5; i++) star(g, x + i * 8, y, i < lit);
     }
 
     protected static int patienceColour(float p) {
@@ -368,9 +368,9 @@ public abstract class CozyScreen extends Screen {
 
     protected void levelAndHearts(GuiGraphics g, int mx, int my, int x, int starsY, int heartsY, int level, int hearts) {
         stars(g, x, starsY, level);
-        hint(mx, my, x, starsY - 1, 35, 7, "Level " + level);
-        for (int i = 0; i < 5; i++) heart(g, x + i * 7, heartsY, i < hearts);
-        hint(mx, my, x, heartsY - 1, 35, 7, "How happy they are working here");
+        hint(mx, my, x, starsY - 1, 40, 7, "Level " + level);
+        for (int i = 0; i < 5; i++) heart(g, x + i * 8, heartsY, i < hearts);
+        hint(mx, my, x, heartsY - 1, 40, 7, "How happy they are working here");
     }
 
     protected static void photo(GuiGraphics g, String skin, int x, int y) {
@@ -395,24 +395,14 @@ public abstract class CozyScreen extends Screen {
         PlayerFaceRenderer.draw(g, ClientSkins.get(skin), x, y, size);
     }
 
+    private static final ResourceLocation RATING = ResourceLocation.fromNamespaceAndPath("ladle_and_lantern", "textures/gui/rating.png");
+
     protected static void star(GuiGraphics g, int x, int y, boolean filled) {
-        int c = filled ? GOLD : 0xFFD8B48A;
-        g.fill(x + 2, y, x + 3, y + 1, c);
-        g.fill(x + 1, y + 1, x + 4, y + 2, c);
-        g.fill(x, y + 2, x + 5, y + 3, c);
-        g.fill(x + 1, y + 3, x + 4, y + 4, c);
-        g.fill(x, y + 4, x + 2, y + 5, c);
-        g.fill(x + 3, y + 4, x + 5, y + 5, c);
+        g.blit(RATING, x, y - 1, 0, filled ? 0 : 16, 0, 7, 7, 32, 16);
     }
 
     protected static void heart(GuiGraphics g, int x, int y, boolean filled) {
-        int c = filled ? 0xFFE0564F : 0xFFE3B79B;
-        g.fill(x, y + 1, x + 2, y + 3, c);
-        g.fill(x + 3, y + 1, x + 5, y + 3, c);
-        g.fill(x + 1, y, x + 2, y + 1, c);
-        g.fill(x + 3, y, x + 4, y + 1, c);
-        g.fill(x + 1, y + 3, x + 4, y + 4, c);
-        g.fill(x + 2, y + 4, x + 3, y + 5, c);
+        g.blit(RATING, x, y - 1, 0, filled ? 0 : 8, 8, 7, 7, 32, 16);
     }
 
     protected static ItemStack stack(String id) {

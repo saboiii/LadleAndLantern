@@ -28,4 +28,19 @@ public final class Fancy {
         int bl = (int) ((a & 255) + ((b & 255) - (a & 255)) * t);
         return r << 16 | g << 8 | bl;
     }
+
+    private static final net.minecraft.resources.ResourceLocation ICONS =
+            net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ladle_and_lantern", "icons");
+
+    private static MutableComponent icon(String glyphs) {
+        return net.minecraft.network.chat.Component.literal(glyphs).withStyle(s -> s.withFont(ICONS).withColor(0xFFFFFF));
+    }
+
+    public static MutableComponent stars(int filled, int outOf) {
+        return icon("\ue000".repeat(Math.max(0, filled)) + "\ue002".repeat(Math.max(0, outOf - filled)));
+    }
+
+    public static MutableComponent hearts(int filled, int outOf) {
+        return icon("\ue003".repeat(Math.max(0, filled)) + "\ue004".repeat(Math.max(0, outOf - filled)));
+    }
 }

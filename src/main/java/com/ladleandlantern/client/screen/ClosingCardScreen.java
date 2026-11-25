@@ -46,16 +46,16 @@ public class ClosingCardScreen extends CozyScreen {
         small(g, date, cx - font.width(date) * 3 / 8, top + 45, INK_SOFT);
 
         int lit = starsFor(data.getInt("average"), data.getInt("orders"));
-        int sx = cx - (5 * 14 - 4) / 2;
+        int sx = cx - (5 * 16 - 2) / 2;
         for (int i = 0; i < 5; i++) {
             g.pose().pushPose();
-            g.pose().translate(sx + i * 14, top + 54, 0);
+            g.pose().translate(sx + i * 16, top + 54, 0);
             g.pose().scale(2, 2, 1);
             star(g, 0, 0, i < lit);
             g.pose().popPose();
         }
 
-        if (data.getInt("orders") > 0) hint(mx, my, sx, top + 54, 5 * 14, 10, data.getInt("average") + "% average score");
+        if (data.getInt("orders") > 0) hint(mx, my, sx, top + 52, 5 * 16, 14, data.getInt("average") + "% average score");
 
         int x0 = left + 12, cardW = (bookW - 24 - 6) / 2, y = top + 70;
         card(g, mx, my, x0, y, cardW, new ItemStack(Items.OAK_DOOR), "Guests", String.valueOf(data.getInt("guests")));

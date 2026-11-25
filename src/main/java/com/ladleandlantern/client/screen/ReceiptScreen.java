@@ -53,7 +53,7 @@ public class ReceiptScreen extends CozyScreen {
         text(g, fit(data.getString("name"), w - 64), x + 25, y + 2, INK);
         small(g, data.getString("kind"), x + 25, y + 13, INK_SOFT);
         int stars = data.getInt("stars"), max = Math.max(1, data.getInt("maxStars"));
-        for (int i = 0; i < max; i++) star(g, x + w - max * 7 + i * 7, y + 3, i < stars);
+        for (int i = 0; i < max; i++) star(g, x + w - max * 8 + i * 8, y + 3, i < stars);
         y += 26;
         dashes(g, x, y, w);
         y += 6;

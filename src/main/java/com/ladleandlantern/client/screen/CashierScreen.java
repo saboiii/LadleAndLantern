@@ -44,7 +44,6 @@ public class CashierScreen extends CozyScreen {
 
     private static final String[] WEEK_LETTERS = {"M", "T", "W", "T", "F", "S", "S"};
     private static final int[] STATUS = {0xFFD8C2A4, 0xFF9CC7E8, 0xFFFFD86B, 0xFFFFB070, 0xFF6FCF8A};
-    private static final String[] STATUS_NAMES = {"Free", "Coming", "Ready", "Waiting", "Eating"};
     private static final String[] STATUS_LONG = {"Free", "On the way", "Ready to order", "Waiting for food", "Eating"};
     private static final int CRITIC = 0xFF8E6BBF;
     private static List<ItemStack> allFood;
@@ -191,8 +190,7 @@ public class CashierScreen extends CozyScreen {
         int boardH = holidays.isEmpty() ? 31 : 43;
         board(g, x, y, w, boardH);
         boolean open = data.getBoolean("open");
-        round(g, x + 6, y + 6, x + 12, y + 12, open ? MINT : PINK, BOARD_EDGE);
-        g.drawString(font, open ? "Open" : "Closed", x + 16, y + 5, BOARD_TEXT, false);
+        g.drawString(font, open ? "Open" : "Closed", x + 6, y + 5, open ? MINT : PINK, false);
         String clock = data.getString("weekday") + " " + data.getString("clock");
         g.drawString(font, clock, x + w - 6 - font.width(clock), y + 5, BOARD_TEXT, false);
         g.drawString(font, data.getString("season"), x + 6, y + 18, 0xFFE8C896, false);
@@ -278,8 +276,7 @@ public class CashierScreen extends CozyScreen {
             }
         }
         int mapTop = floors.length > 1 ? top + 44 : top + 28;
-        int mapBottom = drawMap(g, mx, my, x, mapTop, w, bottom() - mapTop - 14, floors);
-        legend(g, x + w / 2, Math.min(mapBottom + 7, bottom() - 8));
+        drawMap(g, mx, my, x, mapTop, w, bottom() - mapTop - 4, floors);
 
         x = rx();
         heading(g, "Waiting", x + w / 2, top + 12);
@@ -323,17 +320,6 @@ public class CashierScreen extends CozyScreen {
             }
         }
         scrollbar(g, x + w - 4, areaTop, rows * (cardH + 3) - 3, floorScroll, Math.max(0, orders.size() - rows));
-    }
-
-    private void legend(GuiGraphics g, int cx, int y) {
-        int total = 0;
-        for (String n : STATUS_NAMES) total += 8 + (int) (font.width(n) * 0.75f) + 5;
-        int lx = cx - (total - 5) / 2;
-        for (int i = 0; i < STATUS_NAMES.length; i++) {
-            round(g, lx, y, lx + 6, y + 6, STATUS[i], darken(STATUS[i]));
-            small(g, STATUS_NAMES[i], lx + 8, y + 1, INK_SOFT);
-            lx += 8 + (int) (font.width(STATUS_NAMES[i]) * 0.75f) + 5;
-        }
     }
 
     private int drawMap(GuiGraphics g, int mx, int my, int ax, int ay, int aw, int ah, int[] floors) {
@@ -653,7 +639,7 @@ public class CashierScreen extends CozyScreen {
             text(g, num, cx + cw - 3 - font.width(num), cy + ch - 10, isToday ? 0xFFFFFFFF : past ? 0xFFB3A595 : closed ? INK_SOFT : INK);
             int m = marks.getOrDefault(d, 0);
             if ((m & 1) != 0) star(g, cx + 2, cy + 2, !past);
-            if ((m & 2) != 0) heart(g, cx + ((m & 1) != 0 ? 8 : 2), cy + 2, !past);
+            if ((m & 2) != 0) heart(g, cx + ((m & 1) != 0 ? 9 : 2), cy + 2, !past);
             if (weekday == criticDay) g.fill(cx + 2, cy + ch - 5, cx + 5, cy + ch - 3, past ? 0xFFC4B6A6 : CRITIC);
             final int day = d;
             if (hover) {
@@ -675,11 +661,11 @@ public class CashierScreen extends CozyScreen {
         int ly = gy + weeks * ch + 4;
         int lx = gx;
         star(g, lx, ly + 1, true);
-        small(g, "Holiday", lx + 7, ly + 1, INK_SOFT);
-        lx += 7 + (int) (font.width("Holiday") * 0.75f) + 8;
+        small(g, "Holiday", lx + 9, ly + 1, INK_SOFT);
+        lx += 9 + (int) (font.width("Holiday") * 0.75f) + 8;
         heart(g, lx, ly + 1, true);
-        small(g, "Birthday", lx + 7, ly + 1, INK_SOFT);
-        lx += 7 + (int) (font.width("Birthday") * 0.75f) + 8;
+        small(g, "Birthday", lx + 9, ly + 1, INK_SOFT);
+        lx += 9 + (int) (font.width("Birthday") * 0.75f) + 8;
         g.fill(lx, ly + 2, lx + 3, ly + 4, CRITIC);
         small(g, "Critics", lx + 5, ly + 1, INK_SOFT);
         lx += 5 + (int) (font.width("Critics") * 0.75f) + 8;
@@ -857,7 +843,7 @@ public class CashierScreen extends CozyScreen {
             int lx = x + 28 + (int) (font.width(title) * 0.75f) + 4;
             stars(g, lx, y + 15, s.getInt("level"));
             hint(mx, my, lx, y + 14, 35, 7, "Level " + s.getInt("level"));
-            for (int h = 0; h < 5; h++) heart(g, x + cardW - 36 + h * 6, y + 5, h < s.getInt("hearts"));
+            for (int h = 0; h < 5; h++) heart(g, x + cardW - 41 + h * 7, y + 5, h < s.getInt("hearts"));
             if (s.getBoolean("owed")) {
                 round(g, x + cardW - 13, y + 13, x + cardW - 4, y + 22, 0xFFE07A6A, 0xFF9E3A30);
                 text(g, "!", x + cardW - 9, y + 14, 0xFFFFFFFF);
@@ -922,7 +908,7 @@ public class CashierScreen extends CozyScreen {
             bx += bw + 3;
         }
         boolean confirming = confirmFire == selectedStaff;
-        button(g, mx, my, bx, by, confirming ? "Really let go?" : "Let go", Style.DANGER, () -> {
+        button(g, mx, my, bx, by, confirming ? "Really fire?" : "Fire", Style.DANGER, () -> {
             if (confirming) {
                 send("dismiss", args);
                 selectedStaff = -1;
