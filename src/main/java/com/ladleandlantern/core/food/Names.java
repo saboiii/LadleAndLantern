@@ -53,7 +53,8 @@ public final class Names {
 
     public static String skin(RandomSource r) {
         List<? extends String> skins = Config.SKINS.get();
-        if (!skins.isEmpty() && r.nextFloat() < 0.7f) return "user:" + skins.get(r.nextInt(skins.size()));
-        return "default:" + r.nextInt(1_000_000);
+
+        if (!skins.isEmpty() && r.nextFloat() < 0.25f) return "user:" + skins.get(r.nextInt(skins.size()));
+        return "local:" + r.nextInt(1_000_000);
     }
 }
