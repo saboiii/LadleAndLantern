@@ -88,6 +88,21 @@ public class RestaurantCat extends Cat {
 
     @Override
     public void customServerAiStep() {
+        try {
+            serverStep();
+        } catch (Exception e) {
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName() + " tick", e);
+            discard();
+        }
+    }
+
+    private boolean broken;
+
+    private void serverStep() {
+        if (broken) {
+            discard();
+            return;
+        }
         super.customServerAiStep();
         if (!(level() instanceof ServerLevel level)) return;
         Restaurant r = RestaurantStore.get(level.getServer()).byId(restaurantId).orElse(null);
@@ -194,6 +209,15 @@ public class RestaurantCat extends Cat {
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
+        try {
+            readSave(tag);
+        } catch (Exception e) {
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName() + " load", e);
+            broken = true;
+        }
+    }
+
+    private void readSave(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         if (tag.hasUUID("Restaurant")) restaurantId = tag.getUUID("Restaurant");
         bed = tag.contains("Bed") ? BlockPos.of(tag.getLong("Bed")) : null;

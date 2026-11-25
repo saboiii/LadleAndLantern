@@ -1,6 +1,5 @@
 package com.ladleandlantern.client.overlay;
 
-
 import com.ladleandlantern.LadleAndLantern;
 import com.ladleandlantern.core.block.CorkboardBlock;
 import net.minecraft.client.DeltaTracker;

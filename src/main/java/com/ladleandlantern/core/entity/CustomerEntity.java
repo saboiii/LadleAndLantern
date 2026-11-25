@@ -290,6 +290,22 @@ public class CustomerEntity extends RestaurantNpc {
 
     @Override
     protected void customServerAiStep() {
+        try {
+            serverStep();
+        } catch (Exception e) {
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName() + " tick", e);
+
+            discard();
+        }
+    }
+
+    private boolean broken;
+
+    private void serverStep() {
+        if (broken) {
+            discard();
+            return;
+        }
         super.customServerAiStep();
         ServerLevel level = (ServerLevel) level();
         Restaurant r = restaurant().orElse(null);
@@ -1012,7 +1028,21 @@ public class CustomerEntity extends RestaurantNpc {
         for (TableService.Found f : found) {
             if (remaining.remove(BuiltInRegistries.ITEM.getKey(f.stack().getItem()))) chosen.add(f);
         }
-        if (forcedBy == null && !remaining.isEmpty()) return;
+
+        if (forcedBy == null && !remaining.isEmpty()) {
+            List<TableService.Found> wrong = new ArrayList<>();
+            for (TableService.Found f : found) {
+                if (chosen.contains(f) || wrong.size() >= remaining.size()) continue;
+                ResourceLocation id = BuiltInRegistries.ITEM.getKey(f.stack().getItem());
+                boolean someoneElsesOrder = CustomerEntity.inRestaurant(level, r).stream().anyMatch(o -> o != this
+                        && o.state == State.WAITING_FOOD && o.seatPos != null && !o.takeout
+                        && r.seatAt(o.seatPos).map(os -> os.table.contains(f.table())).orElse(false)
+                        && o.order.items().contains(id));
+                if (!someoneElsesOrder) wrong.add(f);
+            }
+            if (wrong.size() < remaining.size()) return;
+            chosen.addAll(wrong);
+        }
         if (forcedBy != null) {
             for (TableService.Found f : found) {
                 boolean shared = r.seats.stream().anyMatch(o -> o != seat && o.table.contains(f.table()));
@@ -1103,7 +1133,7 @@ public class CustomerEntity extends RestaurantNpc {
             detail(scoreLine, "Performance", result.score() + "%", com.ladleandlantern.core.util.Fancy.CREAM, true);
             scoreLine.append(Component.literal("\n  \u25b8 ").withStyle(st -> st.withColor(com.ladleandlantern.core.util.Fancy.PEACH)))
                     .append(com.ladleandlantern.core.util.Fancy.plain("Food  ", com.ladleandlantern.core.util.Fancy.SOFT))
-                    .append(com.ladleandlantern.core.util.Fancy.plain("\u2605".repeat(foodStars) + "\u2606".repeat(5 - foodStars) + " ", com.ladleandlantern.core.util.Fancy.GOLD))
+                    .append(com.ladleandlantern.core.util.Fancy.stars(foodStars, 5)).append(Component.literal(" "))
                     .append(com.ladleandlantern.core.util.Fancy.plain(food + "%" + (result.missing() > 0 ? ", " + result.missing() + " missing" : "")
                             + (result.extra() > 0 ? ", " + result.extra() + " extra" : ""), com.ladleandlantern.core.util.Fancy.CREAM));
             detail(scoreLine, "Speed", Math.round(result.speed() * 100) + "%", com.ladleandlantern.core.util.Fancy.CREAM, false);
@@ -1354,6 +1384,15 @@ public class CustomerEntity extends RestaurantNpc {
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
+        try {
+            readSave(tag);
+        } catch (Exception e) {
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName() + " load", e);
+            broken = true;
+        }
+    }
+
+    private void readSave(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         if (tag.hasUUID("Profile")) profileId = tag.getUUID("Profile");
         type = CustomerType.byId(tag.getInt("Type"));

@@ -28,6 +28,16 @@ public final class FoodOnBlockRenderer<T extends BlockEntity> implements BlockEn
 
     @Override
     public void render(T be, float partialTick, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
+        com.mojang.blaze3d.vertex.PoseStack.Pose start = pose.last();
+        try {
+            draw(be, partialTick, pose, buffers, light, overlay);
+        } catch (Exception e) {
+            while (pose.last() != start && !pose.clear()) pose.popPose();
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName(), e);
+        }
+    }
+
+    private void draw(T be, float partialTick, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
         int seed = (int) be.getBlockPos().asLong();
         if (be instanceof TrayBlockEntity t) {
             List<ItemStack> stacks = t.items();

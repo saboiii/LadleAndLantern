@@ -61,16 +61,19 @@ public final class GameEvents {
         RestaurantStore store = RestaurantStore.get(level.getServer());
         if (time % 20 == 0 && level.dimension() == net.minecraft.world.level.Level.OVERWORLD) {
             long before = store.day();
-            if (store.tickCalendar(level.getDayTime())) onNewDay(level, store, before);
+            if (store.tickCalendar(level.getDayTime())) com.ladleandlantern.core.util.Guard.run("new day", () -> onNewDay(level, store, before));
         }
         if (time % 20 == 0) {
-            for (Restaurant r : store.all()) if (r.dimension.equals(level.dimension())) ShiftManager.tick(level, r);
+            for (Restaurant r : store.all()) {
+                if (r.dimension.equals(level.dimension())) com.ladleandlantern.core.util.Guard.run("shift for " + r.name, () -> ShiftManager.tick(level, r));
+            }
         }
         if (time % 10 == 0) {
             for (ServerPlayer player : level.players()) {
                 ItemStack held = player.getMainHandItem();
                 if (held.getItem() instanceof PlannerItem) {
-                    PlannerItem.linked(held).flatMap(store::byId).ifPresent(r -> PlannerItem.showMarkers(player, held, r));
+                    com.ladleandlantern.core.util.Guard.run("planner markers", () ->
+                            PlannerItem.linked(held).flatMap(store::byId).ifPresent(r -> PlannerItem.showMarkers(player, held, r)));
                 }
             }
         }
@@ -84,7 +87,7 @@ public final class GameEvents {
 
         for (Restaurant r : store.all()) {
             ServerLevel home = level.getServer().getLevel(r.dimension);
-            if (home != null) com.ladleandlantern.core.shift.Wages.payFromFund(home, r, store.day() - 1);
+            if (home != null) com.ladleandlantern.core.util.Guard.run("wages for " + r.name, () -> com.ladleandlantern.core.shift.Wages.payFromFund(home, r, store.day() - 1));
         }
         if (from == to) return;
         for (Restaurant r : store.all()) {

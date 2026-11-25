@@ -25,6 +25,16 @@ public class SpecialsBoardRenderer implements BlockEntityRenderer<SpecialsBoardB
 
     @Override
     public void render(SpecialsBoardBlock.BoardEntity be, float partialTick, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
+        com.mojang.blaze3d.vertex.PoseStack.Pose start = pose.last();
+        try {
+            draw(be, partialTick, pose, buffers, light, overlay);
+        } catch (Exception e) {
+            while (pose.last() != start && !pose.clear()) pose.popPose();
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName(), e);
+        }
+    }
+
+    private void draw(SpecialsBoardBlock.BoardEntity be, float partialTick, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
         ItemStack dish = be.dish();
         for (int side = 0; side < 2; side++) {
             pose.pushPose();

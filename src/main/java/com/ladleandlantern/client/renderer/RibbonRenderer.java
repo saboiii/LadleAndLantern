@@ -20,6 +20,16 @@ public class RibbonRenderer implements BlockEntityRenderer<RibbonBlock.RibbonBlo
 
     @Override
     public void render(RibbonBlock.RibbonBlockEntity be, float partialTick, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
+        com.mojang.blaze3d.vertex.PoseStack.Pose start = pose.last();
+        try {
+            draw(be, partialTick, pose, buffers, light, overlay);
+        } catch (Exception e) {
+            while (pose.last() != start && !pose.clear()) pose.popPose();
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName(), e);
+        }
+    }
+
+    private void draw(RibbonBlock.RibbonBlockEntity be, float partialTick, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
         if (be.getLevel() == null) return;
         long pos = be.getBlockPos().asLong();
         float time = (be.getLevel().getGameTime() + partialTick + (pos % 100)) * 0.06f;

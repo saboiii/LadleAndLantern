@@ -37,6 +37,16 @@ public class NpcRenderer<T extends RestaurantNpc> extends HumanoidMobRenderer<T,
 
     @Override
     public void render(T entity, float yaw, float partialTick, PoseStack pose, MultiBufferSource buffers, int light) {
+        com.mojang.blaze3d.vertex.PoseStack.Pose start = pose.last();
+        try {
+            draw(entity, yaw, partialTick, pose, buffers, light);
+        } catch (Exception e) {
+            while (pose.last() != start && !pose.clear()) pose.popPose();
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName(), e);
+        }
+    }
+
+    private void draw(T entity, float yaw, float partialTick, PoseStack pose, MultiBufferSource buffers, int light) {
         model = ClientSkins.get(entity.skin()).model() == PlayerSkin.Model.SLIM ? slim : wide;
         super.render(entity, yaw, partialTick, pose, buffers, light);
         if (!shouldShowName(entity)) return;
