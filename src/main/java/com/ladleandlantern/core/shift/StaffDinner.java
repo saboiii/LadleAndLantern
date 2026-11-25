@@ -142,9 +142,14 @@ public final class StaffDinner {
     }
 
     public static void cancel(ServerLevel level, Restaurant r) {
-        if (!DINNERS.containsKey(r.id)) return;
+        Dinner d = DINNERS.get(r.id);
+        if (d == null) return;
+
+        boolean ate = d.finishedAt >= 0 || d.next * 2 >= d.lines.size();
         end(level, r);
-        announce(level, r, com.ladleandlantern.core.util.Fancy.gradient("\u263e The chairs are tucked in. Dinner will keep for another evening.",
+        announce(level, r, com.ladleandlantern.core.util.Fancy.gradient(ate
+                        ? "\u263e That's dinner done. Everyone's heading off to bed. Goodnight."
+                        : "\u263e Dinner was cut short tonight. Everyone's heading off to bed.",
                 com.ladleandlantern.core.util.Fancy.LAVENDER, com.ladleandlantern.core.util.Fancy.PEACH));
     }
 

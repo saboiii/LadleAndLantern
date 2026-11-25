@@ -303,13 +303,14 @@ public abstract class RestaurantNpc extends PathfinderMob {
                 glanceUntil = now + 20 + random.nextInt(40);
             }
         }
-        if (glanceAt != null && glanceAt.isAlive() && distanceToSqr(glanceAt) < 100) getLookControl().setLookAt(glanceAt, 20, 20);
+        if (glanceAt != null && glanceAt.isAlive() && distanceToSqr(glanceAt) < 100 && Math.abs(glanceAt.getY() - getY()) < 2.5) getLookControl().setLookAt(glanceAt, 20, 20);
         else if (glanceSpot != null) getLookControl().setLookAt(glanceSpot.x, glanceSpot.y, glanceSpot.z, 15, 15);
     }
 
     @javax.annotation.Nullable
     protected LivingEntity someoneNearby(double range, java.util.function.Predicate<LivingEntity> who) {
-        List<LivingEntity> around = level().getEntitiesOfClass(LivingEntity.class, getBoundingBox().inflate(range), e -> e != this && who.test(e));
+        List<LivingEntity> around = level().getEntitiesOfClass(LivingEntity.class, getBoundingBox().inflate(range, 2.5, range),
+                e -> e != this && who.test(e) && Math.abs(e.getY() - getY()) < 2.5 && hasLineOfSight(e));
         return around.isEmpty() ? null : around.get(random.nextInt(around.size()));
     }
 

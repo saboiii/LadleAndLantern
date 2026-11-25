@@ -183,6 +183,16 @@ public class StaffEntity extends RestaurantNpc {
 
     @Override
     protected void customServerAiStep() {
+        try {
+            serverStep();
+        } catch (Exception e) {
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName() + " tick", e);
+
+            reset();
+        }
+    }
+
+    private void serverStep() {
         super.customServerAiStep();
         ServerLevel level = (ServerLevel) level();
         checkClock(level);
@@ -1278,6 +1288,15 @@ public class StaffEntity extends RestaurantNpc {
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
+        try {
+            readSave(tag);
+        } catch (Exception e) {
+            com.ladleandlantern.core.util.Guard.report(getClass().getSimpleName() + " load", e);
+            reset();
+        }
+    }
+
+    private void readSave(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
         role = StaffRole.byName(tag.getString("Role"));
         home = tag.contains("Home") ? BlockPos.of(tag.getLong("Home")) : null;

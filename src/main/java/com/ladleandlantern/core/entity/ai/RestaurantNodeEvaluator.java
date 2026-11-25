@@ -56,7 +56,10 @@ public class RestaurantNodeEvaluator extends WalkNodeEvaluator {
         }
         if (occupied != null && occupied.contains(BlockPos.asLong(x, y, z))) return PathType.BLOCKED;
         BlockState state = context.getBlockState(new BlockPos(x, y, z));
-        if (ours(state) || ours(context.getBlockState(new BlockPos(x, y - 1, z)))) return PathType.BLOCKED;
+        BlockState below = context.getBlockState(new BlockPos(x, y - 1, z));
+        if (ours(state) || ours(below)) return PathType.BLOCKED;
+
+        if (state.getBlock() instanceof net.minecraft.world.level.block.BedBlock || below.getBlock() instanceof net.minecraft.world.level.block.BedBlock) return PathType.BLOCKED;
         if (state.getBlock() instanceof FenceGateBlock && !state.getValue(FenceGateBlock.OPEN)) return PathType.DOOR_WOOD_CLOSED;
         return super.getPathType(context, x, y, z);
     }
