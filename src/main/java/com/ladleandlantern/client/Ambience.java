@@ -14,8 +14,8 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 public final class Ambience {
     private static final RandomSource RANDOM = RandomSource.create();
     private static Loop loop;
-    private static boolean nextIsCafe = true;
     private static int crowd;
+    private static int retryAt, ticks;
 
     private Ambience() {}
 
@@ -26,9 +26,12 @@ public final class Ambience {
             crowd = mc.level.getEntitiesOfClass(CustomerEntity.class, mc.player.getBoundingBox().inflate(20, 8, 20)).size();
         }
         float target = volumeFor(crowd);
-        if (target > 0 && (loop == null || loop.isStopped())) {
-            loop = new Loop(nextIsCafe ? SoundEventRegistry.AMBIENCE_CAFE.get() : SoundEventRegistry.AMBIENCE_ROOM.get());
-            nextIsCafe = !nextIsCafe;
+
+        boolean playing = loop != null && !loop.isStopped() && mc.getSoundManager().isActive(loop);
+        ticks++;
+        if (target > 0 && !playing && ticks >= retryAt) {
+            retryAt = ticks + 100;
+            loop = new Loop(SoundEventRegistry.AMBIENCE_ROOM.get());
             mc.getSoundManager().play(loop);
         }
         if (loop != null) loop.target = target;
